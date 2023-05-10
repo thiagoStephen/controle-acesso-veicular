@@ -8,7 +8,7 @@ function App() {
       <header>
         <h1>COBREACESSO</h1>
       </header>
-      <CadastroMotorista texto={'testando props'}/>
+      <CadastroMotorista texto={'testando pro'}/>
     </div>
   );
 }
