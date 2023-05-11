@@ -5,7 +5,11 @@ import React from "react";
         render() {
             return (
                 <div>
-                    <button onClick={this.props.fazerLogin}>FAZER LOGIN</button>
+                    <input placeholder={'Usuário'}></input>
+                    <br />
+                    <input placeholder={'Senha'}></input>
+                    <br />
+                    <button onClick={this.props.fazerLogin}>Entrar</button>
                 </div>
             )
         }

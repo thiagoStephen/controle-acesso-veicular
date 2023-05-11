@@ -11,9 +11,9 @@ import React from "react";
         onChangeIdade = (event) => {
             this.setState({valorIdade: event.target.value})
         }
-        onClickLimpar = () => {
-            console.log(this.state.valorNome)
-            console.log(this.state.valorIdade)
+        onClickSalvar = () => {
+            alert(this.state.valorNome)
+            alert(this.state.valorIdade)
             this.setState({valorNome: '', valorIdade: ''})
         }
 
@@ -27,9 +27,8 @@ import React from "react";
                     <label>IDADE:</label>
                     <input name={'idade'} onChange={this.onChangeIdade} value={this.state.valorIdade} placeholder={'Digite a idade'}  />
                     <br />
-                    <button onClick={this.onClickLimpar}>LIMPAR</button>
-                    <br /><br /><br />
-                    <button onClick={this.props.fazerLogof}>SAIRR</button>
+                    <button onClick={this.onClickSalvar}>Salvar</button>
+                    <button onClick={this.props.fazerLogof}>Cancelar</button>
                 </form>
             </div>
            )
