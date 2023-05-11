@@ -28,6 +28,8 @@ import React from "react";
                     <input name={'idade'} onChange={this.onChangeIdade} value={this.state.valorIdade} placeholder={'Digite a idade'}  />
                     <br />
                     <button onClick={this.onClickLimpar}>LIMPAR</button>
+                    <br /><br /><br />
+                    <button onClick={this.props.fazerLogof}>SAIRR</button>
                 </form>
             </div>
            )
