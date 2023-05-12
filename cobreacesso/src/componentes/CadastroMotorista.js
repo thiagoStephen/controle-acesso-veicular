@@ -5,6 +5,24 @@ import React from "react";
             valorNome: '',
             valorIdade: ''
         }
+
+        componentDidUpdate = () => {
+            const novoMotorista = this.state
+            localStorage.setItem("motorista", JSON.stringify(novoMotorista))
+            
+
+            
+        }
+
+        componentDidMount = () => {
+            const buscarMotorista = localStorage.getItem("motorista")
+            const motoristaObjeto = JSON.parse(buscarMotorista)
+
+            console.log(motoristaObjeto)
+            console.log(motoristaObjeto.valorNome)
+
+        }
+
         onChangeNome = (event) => {
             this.setState({valorNome: event.target.value})
         }
@@ -18,6 +36,7 @@ import React from "react";
         }
 
         render(){
+            console.log(this.state)
             return (<div>
                 <h2>Cadastro de Motorista</h2>
                 <form>
@@ -25,7 +44,7 @@ import React from "react";
                     <input name={'nome'} onChange={this.onChangeNome} value={this.state.valorNome} placeholder={'Digite o nome'} />
                     <br/>
                     <label>IDADE:</label>
-                    <input name={'idade'} onChange={this.onChangeIdade} value={this.state.valorIdade} placeholder={'Digite a idade'}  />
+                    <input name={'idade'} type="number" onChange={this.onChangeIdade} value={this.state.valorIdade} placeholder={'Digite a idade'}  />
                     <br />
                     <button onClick={this.onClickSalvar}>Salvar</button>
                     <button onClick={this.props.fazerLogof}>Cancelar</button>
